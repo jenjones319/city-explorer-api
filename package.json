@@ -1,17 +1,26 @@
 {
-  "name": "server",
+  "name": "city-explorer-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "City Explorer App",
   "main": "server.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jenjones319/city-explorer-api"
+  },
+  "author": "Jen Jones",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jenjones319/city-explorer-api"
+  },
+  "homepage": "https://github.com/jenjones319/city-explorer-api/blob/master/README.md",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
   }
 }
