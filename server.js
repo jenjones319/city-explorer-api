@@ -4,7 +4,11 @@
 const express = require('express');
 require('dotenv').config();
 const cors = require('cors');
+<<<<<<< HEAD
 const { response } = require('express');
+=======
+const response = require('express');
+>>>>>>> fbb7d0bf4d9124fe760d4f55c11eee03424d9d40
 const superagent = require('superagent');
 
 // Application Setup
