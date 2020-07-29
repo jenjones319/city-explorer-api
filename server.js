@@ -45,18 +45,9 @@ function locationHandler(request, response) {
     .catch( error => {
       console.log(error);
     });
-  // const locationData = require('./data/location.json');
-  // const location = new Location(city, locationData);
-  // response.status(200).send(location);
 }
 
 function restaurantHandler(request, response) {
-  // const restaurantsData = require('./data/restaurants.json');
-  // const arrayOfRestaurants = url.nearby_restaurants;
-  // const restaurantsResults = [];
-  // arrayOfRestaurants.forEach(restaurantObj => {
-  //   restaurantsResults.push(new Restaurant(restaurantObj));
-  // });
   const queryString = request.query;
   console.log(queryString);
   const lat = parseFloat(request.query.latitude);
