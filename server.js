@@ -17,7 +17,6 @@ app.get('/', rootHandler);
 app.get('/location', locationHandler);
 app.get('/yelp', restaurantHandler);
 app.get('/trails',trailsHandler);
-app.get('/movies', movieHandler);
 app.get('/weather', weatherHandler);
 app.use('*', notFoundHandler);
 app.use(errorHandler);
@@ -45,6 +44,9 @@ function locationHandler(request, response) {
     .catch( error => {
       console.log(error);
     });
+  // const locationData = require('./data/location.json');
+  // const location = new Location(city, locationData);
+  // response.status(200).send(location);
 }
 
 function restaurantHandler(request, response) {
@@ -111,7 +113,7 @@ function trailsHandler(request, response) {
   const url = 'https://www.hikingproject.com/data/get-trails';
   superagent.get(url)
     .query({
-      key: process.env.TRAIL_KEY,
+      key: process.env.TRAILS_KEY,
       lat: latitude,
       lon: longitude,
       maxDistance: 200
@@ -122,14 +124,9 @@ function trailsHandler(request, response) {
       const trailResults = [];
       arrayOfTrailData.forEach(trail => {
         trailResults.push(new Trails(trail));
-      })
-        .catch( error => {
-          console.log(error)
-        });
+      });
       response.status(200).send(trailResults);
-    });
-}
-function movieHandler() {
+    })
 }
 
 function notFoundHandler(request, response) {
