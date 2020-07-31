@@ -23,3 +23,7 @@ This app shares information about weather, movies, Yelp reviews, and more for a 
 ## Credits and Collaborations
 * Used presentation 6 from 301 class, tutorial via github for Heroku connection.
 * 07/28/2020 partners were Christian and Byron. 
+
+## Heroku Link
+[_City Explorer App](https://explore-the-city-dv.herokuapp.com/)
+
